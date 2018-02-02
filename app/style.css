@@ -1,0 +1,19 @@
+div {
+	background-color:grey;
+	color:red;
+}
+
+#redFont {
+	background-color:red;
+	font-size:200px;
+}
+
+#opacityRange {
+	width:30%;
+	padding:30px;
+	background-color:red;
+}
+
+#opacityExample {
+	background-color:red;
+}
