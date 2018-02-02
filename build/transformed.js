@@ -21199,7 +21199,7 @@ module.exports = camelize;
 
 
 const opacityStyle = {
-  width: '50%',
+  width: '30%',
   height: '300px',
   padding: '20px'
 };
@@ -21209,7 +21209,7 @@ class OpacityRange extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Compone
   constructor(props) {
     super(props);
 
-    this.state = { value: .5, background: 'blue' };
+    this.state = { value: .5, background: 'red' };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -21224,18 +21224,29 @@ class OpacityRange extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Compone
         id: 'opacityRange',
         style: opacityStyle
       },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_color__["SliderPicker"], {
-        color: this.state.background,
-        onChange: this.handleChange
-
-      }),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_input_range___default.a, {
-        maxValue: 1,
-        minValue: 0,
-        step: .05,
-        value: Math.round(this.state.value * 10) / 10,
-        onChange: value => this.setState({ value })
-      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        {
+          style: { paddingBottom: '10px', paddingTop: '' }
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_color__["SliderPicker"], {
+          color: this.state.background,
+          onChange: this.handleChange
+        })
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        {
+          style: { padding: '10px' }
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_input_range___default.a, {
+          maxValue: 1,
+          minValue: 0,
+          step: .05,
+          value: Math.round(this.state.value * 10) / 10,
+          onChange: value => this.setState({ value })
+        })
+      ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         null,
@@ -21245,17 +21256,29 @@ class OpacityRange extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Compone
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         {
-          style: { color: 'black', padding: '10px', height: '70%', width: '50%', background: 'white', position: 'absolute', border: '4px' }
+          style: { color: 'black', padding: '10px', height: '70%', width: '30%', background: 'white', position: 'absolute', borderStyle: 'solid', borderWidth: '20px' }
         },
-        'Test Form Example Text!'
+        'Test Form Example Text! - - - - - - Enter your name here. _______ Check this box. ___________ SSN:491851034 ___________ ACCT#: 015015919393 Test Form Example Text! - - - - - - Enter your name here. _______ Check this box. ___________ SSN:491851034 ___________ ACCT#: 015015919393 Test Form Example Text! - - - - - - Enter your name here. _______ Check this box. ___________ SSN:491851034 ___________ ACCT#: 015015919393 Test Form Example Text! - - - - - - Enter your name here. _______ Check this box. ___________ SSN:491851034 ___________ ACCT#: 015015919393 Test Form Example Text! - - - - - - Enter your name here. _______ Check this box. ___________ SSN:491851034 ___________ ACCT#: 015015919393'
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', {
         id: 'opacityExample',
-        style: { opacity: this.state.value, color: 'red', padding: '10px', height: '70%', width: '50%', background: 'black', position: 'absolute' }
+        style: { opacity: this.state.value, color: 'red', padding: '10px', height: '70%', width: '30%', background: 'black', position: 'absolute', wordWrap: 'break-word' }
       }),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', {
-        style: { padding: '50px', height: '10%%', width: '40%', background: this.state.background, position: 'relative', left: '20%', top: '80%' }
-      })
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        {
+          id: 'entryContainer',
+          style: { padding: '10px', height: '70%', width: '30%', position: 'absolute' }
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', {
+          id: 'textEntryExample',
+          style: { padding: '50px', height: '10%', width: '30%', background: this.state.background, position: 'absolute', left: '40%', top: '40%' }
+        }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', {
+          id: 'fieldExample',
+          style: { padding: '50px', height: '5%', width: '10%', background: 'white', position: 'absolute', left: '20px', bottom: '1%' }
+        })
+      )
     );
   }
 

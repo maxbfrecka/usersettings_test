@@ -17,7 +17,7 @@ export class OpacityRange extends React.Component {
 	constructor(props) {
     super(props);
 
-    this.state = {value: .5, background:'blue' }
+    this.state = {value: .5, background:'red' }
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -73,17 +73,19 @@ export class OpacityRange extends React.Component {
 
       <div
       	id="entryContainer"
-      	style={{padding:'10px', height:'70%', width:'30%',position:'absolute'}}
+      	style={{padding:'10px', height:'70%', width:'30%',position:'relative'}}
       	>
       <div
       	id="textEntryExample"
-      	style={{padding:'50px',height:'10%',width:'30%',background:this.state.background, position:'relative', left:'40%',top:'50%'}}
+      	style={{padding:'5px',height:'50px',width:'150px',background:this.state.background, position:'absolute', left:'165px',top:'300px',fontWeight:'bold',fontSize:"20px"}}
       	>
+      	8472534_
       </div>
       <div
       	id="fieldExample"
-      	style={{padding:'50px',height:'5%',width:'10%',background:'white', position:'relative', left:'20%',bottom:'1%'}}
+      	style={{padding:'5px',height:'30px',width:'150px',background:'white', position:'absolute', left:'165px',top:'230px'}}
       	>
+      	847-25-3455
       </div>
       </div>
 
